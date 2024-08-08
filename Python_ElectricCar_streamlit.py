@@ -14,7 +14,7 @@ plt.rc('font', family='malgun gothic')
 def basic():
 
     # 데이터 가져오기
-    df = pd.read_csv('Data\한국전력공사_지역별 전기차 현황정보_20230331.csv', encoding='EUC-KR')
+    df = pd.read_csv('electric_car_data.csv', encoding='EUC-KR')
 
     # melt를 위해 전체 컬럼명이 필요함.
     columns = df.columns.to_list()
@@ -123,7 +123,7 @@ def elec_exe():
     elif menu == '2022년 분기별 분석':
         region_2022_quarter(df_basic)
     else:
-        st.image("Data\Moses.png", width=600)
+        st.image("Moses.png", width=600)
 
 # 자신이 호출할 때만 실행되는 코드. (다른 파일에서 호출할 때는 실행 안 됨.)
 if __name__=='__main__':
