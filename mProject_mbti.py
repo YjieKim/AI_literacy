@@ -28,8 +28,7 @@ def mbti_main():
         placeholder="MBTI를 선택하세요.",
     )
 
-    st.divider()
-    
+
     if user_mbti is not None:
 
         st.write(f"당신의 MBTI는 {user_mbti}이네요.")
