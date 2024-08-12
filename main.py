@@ -23,6 +23,6 @@ if userid == 'abc' and userpw == '1234':
         ec.elec_exe()
     elif menu == '머신러닝':
         st.header("공사중...")
-        st.image('Data\Hello.jpg')
+        st.image('Hello.jpg')
     elif menu == '미니프로젝트: MBTI별 여가활동 추천':
         mp.mbti_main()

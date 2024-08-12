@@ -26,7 +26,7 @@ def mbti_main():
         placeholder="MBTI를 선택하세요.",
     )
 
-    with st.expander('') :
+    with st.expander('내용을 확인하시려면 클릭해 주세요.') :
 
         if user_mbti is not None:
 
