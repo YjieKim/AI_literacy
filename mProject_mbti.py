@@ -33,8 +33,6 @@ def mbti_main():
 
         st.divider()
 
-        st.write(f"당신의 MBTI는 {user_mbti}이네요.")
-
         recommend_food = mbti_fd.re_food(user_mbti)   # 음식 추천
         recommend_workout = mbti_wo.get_random_workout(user_mbti)   # 운동 추천
         recommend_movie, reason = mbti_mv.recommend_movie(user_mbti)    # 영화 추천
