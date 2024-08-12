@@ -14,7 +14,7 @@ menu = ''
 if userid == 'abc' and userpw == '1234':
     st.sidebar.title("환영합니다♥")
     st.title("YJ의 포트폴리오")
-    # st.image('모지스.png')
+    st.image('Moses.png')
 
     menu = st.sidebar.radio("메뉴선택", ['파이썬 기초', '탐색적 분석: 전기자동차', '머신러닝', '미니프로젝트: MBTI별 여가활동 추천'], index=None)
     st.header(menu)

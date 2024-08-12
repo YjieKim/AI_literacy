@@ -3,6 +3,7 @@
 import MBTI_food as mbti_fd
 import mbti_workout_eunji as mbti_wo
 import mbti_movie as mbti_mv
+import streamlit as st
 
 def mbti_main():
   
@@ -18,8 +19,17 @@ def mbti_main():
     cnt = 0
 
     while True:
-        user_mbti = input("당신의 MBTI를 알려주세요! >> ")  # MBTI 입력받기
-        user_mbti = user_mbti.upper()   # 입력한 MBTI를 모두 대문자로 바꾸기
+        # user_mbti = input("당신의 MBTI를 알려주세요! >> ")  # MBTI 입력받기
+        # user_mbti = user_mbti.upper()   # 입력한 MBTI를 모두 대문자로 바꾸기
+
+        user_mbti = st.selectbox(
+            "당신의 MBTI는 무엇인가요?",
+            ("ISTJ", "ISFJ", "INFJ", "INTJ", "ISTP", "ISFP", "INFP", "INTP",
+                    "ESTP", "ESFP", "ENFP", "ENTP", "ESTJ", "ESFJ", "ENFJ", "ENTJ"),
+            index=None, placeholder="MBTI를 선택하세요."
+        )
+
+        st.write("You selected:", user_mbti)
 
         # MBTI를 제대로 입력했는지 확인
         mbti_list = ["ISTJ", "ISFJ", "INFJ", "INTJ", "ISTP", "ISFP", "INFP", "INTP",
