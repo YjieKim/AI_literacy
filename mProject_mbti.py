@@ -46,7 +46,6 @@ def mbti_main():
 이번 주말에는 {recommend_food}를 드셔보세요.
 
 (아주 많이) 덥고 습하지만… 운동도 잊으면 안 되죠.
-
 {recommend_workout}도 한 번 해보세요~
 
 마지막으로 시원한 맥주와 함께 '{recommend_movie}' 영화를 보며 주말 마무리를 해 보아요.
