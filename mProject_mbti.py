@@ -38,23 +38,23 @@ def mbti_main():
         recommend_movie, reason = mbti_mv.recommend_movie(user_mbti)    # 영화 추천
 
         st.markdown(f"""
-                당신의 MBTI는 {user_mbti}네요.
-                그럼 {user_mbti}인 당신만을 위한 추천 드립니다.
+당신의 MBTI는 {user_mbti}네요.
+그럼 {user_mbti}인 당신만을 위한 추천 드립니다.
 
-        
-                이번 주말에는 {recommend_food}를 드셔보세요.
-        
-                (아주 많이) 덥고 습하지만… 운동도 잊으면 안 되죠.
-                {recommend_workout}도 한 번 해보세요~
-        
-                마지막으로 시원한 맥주와 함께
-                '{recommend_movie}' 영화를 보며 주말 마무리를 해 보아요.
-                {reason}
-                
 
-                그럼 행복한 주말 보내기를 바랍니다.
-                다음 주에도 심심하면 다시 방문해 주세요~
-                """)
+이번 주말에는 {recommend_food}를 드셔보세요.
+
+(아주 많이) 덥고 습하지만… 운동도 잊으면 안 되죠.
+{recommend_workout}도 한 번 해보세요~
+
+마지막으로 시원한 맥주와 함께
+'{recommend_movie}' 영화를 보며 주말 마무리를 해 보아요.
+{reason}
+
+
+그럼 행복한 주말 보내기를 바랍니다.
+다음 주에도 심심하면 다시 방문해 주세요~
+""")
 
 
 #            st.write(f"""
