@@ -2,6 +2,7 @@
 import streamlit as st
 import Python_ElectricCar_streamlit as ec
 import pybasic as pb
+import mProject_mbti as mp
 
 # 로그인 화면
 st.sidebar.title("로그인")
@@ -12,8 +13,10 @@ userpw = st.sidebar.text_input("패스워드 입력", value='', type='password',
 menu = ''
 if userid == 'abc' and userpw == '1234':
     st.sidebar.title("환영합니다♥")
+    st.title("YJ의 포트폴리오")
+    # st.image('모지스.png')
 
-    menu = st.sidebar.radio("메뉴선택", ['파이썬 기초', '탐색적 분석: 전기자동차', '머신러닝'], index=None)
+    menu = st.sidebar.radio("메뉴선택", ['파이썬 기초', '탐색적 분석: 전기자동차', '머신러닝', '미니프로젝트: MBTI별 여가활동 추천'], index=None)
     st.header(menu)
 
 if menu == '파이썬 기초':
@@ -22,4 +25,6 @@ elif menu == '탐색적 분석: 전기자동차':
     ec.elec_exe()
 elif menu == '머신러닝':
     st.header("공사중...")
-    st.image('Hello.jpg')
+    st.image('Data\Hello.jpg')
+elif menu == '미니프로젝트: MBTI별 여가활동 추천':
+    mp.mbti_main()
