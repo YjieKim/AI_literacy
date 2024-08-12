@@ -15,14 +15,18 @@ def mbti_main():
     MBTI에 맞게 당신만을 위해 준비했으니, 당신의 MBTI를 먼저 입력해주세요~
     """)
 
+    mbti_list = ["ISTJ", "ISFJ", "INFJ", "INTJ", "ISTP", "ISFP", "INFP", "INTP",
+                "ESTP", "ESFP", "ENFP", "ENTP", "ESTJ", "ESFJ", "ENFJ", "ENTJ"]
+    
     user_mbti = ''
     user_mbti = st.selectbox(
         "당신의 MBTI는 무엇인가요?",
-        ("ISTJ", "ISFJ", "INFJ", "INTJ", "ISTP", "ISFP", "INFP", "INTP",
-                "ESTP", "ESFP", "ENFP", "ENTP", "ESTJ", "ESFJ", "ENFJ", "ENTJ"),
+        mbti_list,
         index=None,
         placeholder="MBTI를 선택하세요.",
     )
+
+    st.write(f"당신의 MBTI는 {user_mbti}이네요.")
 
     if user_mbti != '':
         recommend_food = mbti_fd.re_food(user_mbti)   # 음식 추천
@@ -30,8 +34,7 @@ def mbti_main():
         recommend_movie, reason = mbti_mv.recommend_movie(user_mbti)    # 영화 추천
 
         st.write(f"""
-        ************************************************************************
-
+    
         당신의 MBTI는 {user_mbti}네요.
         그럼 {user_mbti}인 당신만을 위한 추천 드립니다.
 
@@ -47,7 +50,6 @@ def mbti_main():
         그럼 행복한 주말 보내기를 바랍니다.
         다음 주에도 심심하면 다시 방문해 주세요~
 
-        ************************************************************************
         """)
     else:
         st.write("기다리는 중이에요.")
