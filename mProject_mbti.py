@@ -26,7 +26,7 @@ def mbti_main():
             "당신의 MBTI는 무엇인가요?",
             ("ISTJ", "ISFJ", "INFJ", "INTJ", "ISTP", "ISFP", "INFP", "INTP",
                     "ESTP", "ESFP", "ENFP", "ENTP", "ESTJ", "ESFJ", "ENFJ", "ENTJ"),
-            index=None, placeholder="MBTI를 선택하세요."
+            index=None, placeholder="MBTI를 선택하세요.",
         )
 
         st.write("You selected:", user_mbti)
