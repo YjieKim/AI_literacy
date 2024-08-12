@@ -15,6 +15,7 @@ def mbti_main():
     MBTI에 맞게 당신만을 위해 준비했으니, 당신의 MBTI를 먼저 입력해주세요~
     """)
 
+    user_mbti = ''
     user_mbti = st.selectbox(
         "당신의 MBTI는 무엇인가요?",
         ("ISTJ", "ISFJ", "INFJ", "INTJ", "ISTP", "ISFP", "INFP", "INTP",
