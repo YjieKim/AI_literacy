@@ -28,3 +28,5 @@ if userid == 'abc' and userpw == '1234':
         st.image('Hello.jpg')
     elif menu == '미니프로젝트: MBTI별 여가활동 추천':
         mp.mbti_main()
+    else:
+        st.header('')
