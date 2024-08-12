@@ -31,6 +31,8 @@ def mbti_main():
 
     if user_mbti is not None:
 
+        st.divider()
+
         st.write(f"당신의 MBTI는 {user_mbti}이네요.")
 
         recommend_food = mbti_fd.re_food(user_mbti)   # 음식 추천
