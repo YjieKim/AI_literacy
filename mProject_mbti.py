@@ -42,7 +42,7 @@ def mbti_main():
                 그럼 {user_mbti}인 당신만을 위한 추천 드립니다.
                 """)
         
-        st.divider()
+        st.write()
 
         st.write(f"이번 주말에는 {recommend_food}를 드셔보세요.")
 
@@ -56,7 +56,7 @@ def mbti_main():
                 {reason}
                 """)
         
-        st.divider()
+        st.write()
 
         st.write("""
                 그럼 행복한 주말 보내기를 바랍니다.
