@@ -17,7 +17,8 @@ if userid == 'abc' and userpw == '1234':
     st.title("AI 리터러시 과정 실습")
 
     menu = st.sidebar.radio("메뉴선택", ['파이썬 기초', '탐색적 분석: 전기자동차', '머신러닝', '미니프로젝트: MBTI별 여가활동 추천'], index=None)
-    st.header(menu)
+    if menu is not None:
+        st.header(menu)
 
     if menu == '파이썬 기초':
         pb.basic()
@@ -28,5 +29,3 @@ if userid == 'abc' and userpw == '1234':
         st.image('Hello.jpg')
     elif menu == '미니프로젝트: MBTI별 여가활동 추천':
         mp.mbti_main()
-    else:
-        st.header('')
