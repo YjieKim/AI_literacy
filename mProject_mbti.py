@@ -30,41 +30,39 @@ def mbti_main():
 
     st.divider()
     
-    with st.expander('내용을 확인하시려면 클릭해 주세요.') :
+    if user_mbti is not None:
 
-        if user_mbti is not None:
+        st.write(f"당신의 MBTI는 {user_mbti}이네요.")
 
-            st.write(f"당신의 MBTI는 {user_mbti}이네요.")
+        recommend_food = mbti_fd.re_food(user_mbti)   # 음식 추천
+        recommend_workout = mbti_wo.get_random_workout(user_mbti)   # 운동 추천
+        recommend_movie, reason = mbti_mv.recommend_movie(user_mbti)    # 영화 추천
 
-            recommend_food = mbti_fd.re_food(user_mbti)   # 음식 추천
-            recommend_workout = mbti_wo.get_random_workout(user_mbti)   # 운동 추천
-            recommend_movie, reason = mbti_mv.recommend_movie(user_mbti)    # 영화 추천
+        st.write(f"""
+                당신의 MBTI는 {user_mbti}네요.
+                그럼 {user_mbti}인 당신만을 위한 추천 드립니다.
+                """)
+        
+        st.divider()
 
-            st.write(f"""
-                    당신의 MBTI는 {user_mbti}네요.
-                    그럼 {user_mbti}인 당신만을 위한 추천 드립니다.
-                    """)
-            
-            st.divider()
+        st.write(f"이번 주말에는 {recommend_food}를 드셔보세요.")
 
-            st.write(f"이번 주말에는 {recommend_food}를 드셔보세요.")
+        st.write(f"""
+                (아주 많이) 덥고 습하지만… 운동도 잊으면 안 되죠.
+                {recommend_workout}도 한 번 해보세요~""")
+        
+        st.write(f"""
+                    마지막으로 시원한 맥주와 함께
+                '{recommend_movie}' 영화를 보며 주말 마무리를 해 보아요.
+                {reason}
+                """)
+        
+        st.divider()
 
-            st.write(f"""
-                    (아주 많이) 덥고 습하지만… 운동도 잊으면 안 되죠.
-                    {recommend_workout}도 한 번 해보세요~""")
-            
-            st.write(f"""
-                     마지막으로 시원한 맥주와 함께
-                    '{recommend_movie}' 영화를 보며 주말 마무리를 해 보아요.
-                    {reason}
-                    """)
-            
-            st.divider()
-            
-            st.write("""
-                    그럼 행복한 주말 보내기를 바랍니다.
-                    다음 주에도 심심하면 다시 방문해 주세요~
-                    """)
+        st.write("""
+                그럼 행복한 주말 보내기를 바랍니다.
+                다음 주에도 심심하면 다시 방문해 주세요~
+                """)
 
 
 #            st.write(f"""
