@@ -3,6 +3,7 @@ import streamlit as st
 import Python_ElectricCar_streamlit as ec
 import pybasic as pb
 import mProject_mbti as mp
+import car_predict_up as cp
 
 # 로그인 화면
 st.sidebar.title("로그인")
@@ -14,18 +15,16 @@ menu = ''
 if userid == 'abc' and userpw == '1234':
     st.sidebar.title("환영합니다♥")
 
-    st.title("AI 리터러시 과정 실습")
-
-    menu = st.sidebar.radio("메뉴선택", ['파이썬 기초', '탐색적 분석: 전기자동차', '머신러닝', '미니프로젝트: MBTI별 여가활동 추천'], index=None)
-    if menu is not None:
-        st.header(menu)
+    menu = st.sidebar.radio("메뉴선택", ['파이썬 기초', '탐색적 분석: 전기자동차', '머신러닝: 중고차 가격 예측', '미니프로젝트: MBTI별 여가활동 추천'], index=None)
+    st.header(menu)
 
     if menu == '파이썬 기초':
         pb.basic()
     elif menu == '탐색적 분석: 전기자동차':
         ec.elec_exe()
-    elif menu == '머신러닝':
-        st.header("공사중...")
-        st.image('Hello.jpg')
+    elif menu == '머신러닝: 중고차 가격 예측':
+        #st.header("공사중...")
+        #st.image('Hello.jpg')
+        cp.aiml_main()
     elif menu == '미니프로젝트: MBTI별 여가활동 추천':
         mp.mbti_main()
