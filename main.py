@@ -16,7 +16,8 @@ if userid == 'abc' and userpw == '1234':
     st.sidebar.title("환영합니다♥")
 
     menu = st.sidebar.radio("메뉴선택", ['파이썬 기초', '탐색적 분석: 전기자동차', '머신러닝: 중고차 가격 예측', '미니프로젝트: MBTI별 여가활동 추천'], index=None)
-    # st.header(menu)
+    if menu != '':
+        st.header(menu)
 
     if menu == '파이썬 기초':
         pb.basic()
