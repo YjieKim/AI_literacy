@@ -16,7 +16,6 @@ def indata():
 
     # 데이터 입력
     for i in fields:
-        # data[i] = input(f'{i} : ')
         data[i] = st.text_input(f'{i} : ')
     filename = 'aidata/used_car_x_test_indata.csv'
 
@@ -138,6 +137,7 @@ def aiml_main():
     filename = indata()
     if st.button('예상 가격 조회'):
         model(filename)
+
 
 
 if __name__ == '__main__':
